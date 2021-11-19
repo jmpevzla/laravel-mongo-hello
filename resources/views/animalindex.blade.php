@@ -5,23 +5,21 @@
     <meta charset="utf-8">
     <title>Laravel MongoDB CRUD Index Page</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
   </head>
   <body>
     <div class="container">
-    <br />
     @if (\Session::has('success'))
       <div class="alert alert-success">
         <p>{{ \Session::get('success') }}</p>
-      </div><br />
+      </div>
      @endif
-    <br />
-    <a href="{{action('AnimalController@create')}}" class="btn btn-primary">Create</a>
-    <br />
+    <div class="mt-2 mb-2">
+        <a href="{{action('AnimalController@create')}}" class="btn btn-primary">Create</a>
+    </div>
+
     <table class="table table-striped">
-    <thead>
+    <thead class="table-dark">
       <tr>
         <th>ID</th>
         <th>Species</th>
